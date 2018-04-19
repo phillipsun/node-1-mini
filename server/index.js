@@ -7,6 +7,7 @@ const app = express()
 
 
 app.use(bodyParser.json())
+app.use( express.static( __dirname + "/../build") );
 
 // these are endpoints
 app.get('/api/books', bc.read)
